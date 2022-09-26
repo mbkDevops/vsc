@@ -1,4 +1,21 @@
- pipeline { Anil, suresh, sagar
+ pipeline { Anil, suresh
     agent any 
     stages {
- 
+        stage('Build') { 
+            steps {
+                // 
+            }
+        }
+        stage('Test') { 
+            steps {
+                // 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                // 
+            }
+        }
+    }
+}
+
