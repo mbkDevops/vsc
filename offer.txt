@@ -17,4 +17,29 @@ pipeline { Anil, suresh
             }
         }
     }
-}
+
+
+
+
+
+
+pipeline { Anil, suresh
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                // 
+            }
+        }
+        stage('Test') { 
+            steps {
+                // 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                // 
+            }
+        }
+    }
+}}
