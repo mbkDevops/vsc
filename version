@@ -1,7 +1,7 @@
  pipeline { Anil, suresh
     agent any 
     stages {
-  iiiiiii:wq!i      stage('Build') {
+    stage('Build') {
             steps {
                 // 
             }
