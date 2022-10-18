@@ -1,7 +1,7 @@
  pipeline { Anil, suresh
     agent any 
     stages {
-        stage('Build') { vbgb
+        stage('Build') {
             steps {
                 // 
             }
