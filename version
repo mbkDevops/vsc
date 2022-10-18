@@ -10,12 +10,4 @@
             steps {
                 // 
             }
-        }
-        stage('Deploy') { 
-            steps {
-                // 
-            }
-        }
-    }
-}
-
+   
