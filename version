@@ -1,4 +1,5 @@
- hhhh pipeline { Anil, suresh
+ hhhhhkb:wq!
+h pipeline { Anil, suresh
     agent any 
     stages {
     stage('Build') {
