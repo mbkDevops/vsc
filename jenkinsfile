@@ -1,0 +1,27 @@
+node ('batch-3')
+{ 
+    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '3', daysToKeepStr: '', numToKeepStr: '3')), pipelineTriggers([pollSCM('H/1 * * * *')])])
+  
+    
+    java = tool name : "jdk 9"
+    env.JAVA_HOME = "${java}"
+    
+    def maven = tool name : "maven"
+    stage ('git install')
+    {
+        sh "sudo yum install git -y"
+    }
+    
+    stage ('clone the code maven-server')
+    {
+        git branch: 'main', credentialsId: '0afd76ee-e144-4e9a-a10f-3c06576ca804', url: 'https://github.com/mbkDevops/mbk-app.git'
+    }
+    stage ('build code')
+    {
+        sh "${maven}/bin/mvn clean"
+    }
+    stage ('mail notificatin')
+    {
+        mail bcc: 'krishnachaithanya193@gmail.com', body: 'build go head', cc: 'krishnachaithanya193@gmail.com', from: '', replyTo: '', subject: 'notification', to: 'krishnachaithanya193@gmail.com'
+    }
+}
